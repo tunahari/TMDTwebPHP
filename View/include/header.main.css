@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+div {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, textarea, button {
+    border: none;
+    outline: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.BackGround__Body {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000069;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.BackGround__Body.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Product__Page__Container {
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Product__Page__Header {
+    width: 100%;
+    flex-direction: column;
+}
+
+.Product__Page__Header__Top {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.Product__Page__Header__Top__Logo__Group {
+    gap: 10px;
+}
+
+.Product__Page__Header__Top__Gift {
+    cursor: pointer;
+    display: none;
+}
+
+.Product__Page__Header__Top__Info__Nav {
+    width: 100%;
+}
+
+.Product__Page__Header__Top__Info {
+    flex-basis: calc(100% / 2);
+    gap: 30px;
+}
+
+.Product__Page__Header__Top__Info__Email, 
+.Product__Page__Header__Top__Info__Time {
+    gap: 5px;
+    font-weight: 500;
+}
+
+.Product__Page__Header__Top__Nav__Group {
+    flex-basis: calc(100% / 2);
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.Product__Page__Header__Top__Nav__Group a {
+    color: #7d5fff;
+    font-weight: 500;
+}
+
+.Product__Page__Header__Bottom {
+    width: 100%;
+    background-color: #7d5fff;
+    padding: 0 20px;
+}
+
+.Product__Page__Header__Bottom__Logo__Search {
+    flex-basis: 60%;
+}
+
+.Product__Page__Header__Bottom__Logo,
+.Product__Page__Header__Top__Logo {
+    font-size: 27px;
+    gap: 10px;
+    font-weight: 900;
+    color: #fff;
+    flex-basis: 30%;
+}
+
+.Product__Page__Header__Top__Logo {
+    color: #7d5fff;
+    display: none;
+}
+
+.Product__Page__Header__Bottom__Filter__Bar {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.Product__Page__Header__Bottom__Search {
+    flex-basis: 70%;
+    justify-content: center;
+}
+
+.Product__Page__Header__Bottom__Search input {
+    height: 35px;
+    flex-basis: calc(100% - 200px);
+    padding: 0 15px;
+    border-radius: 5px 0 0 5px;
+    min-width: 300px;
+}
+
+.Product__Page__Header__Bottom__Search__Button {
+    width: 60px;
+    background-color: #1e272e;
+    font-size: 17px;
+    font-weight: 500;
+    gap: 5px;
+    justify-content: center;
+    height: 35px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+.Product__Page__Header__Bottom__Phone__Cart__Wishlist__Account {
+    flex-basis: 40%;
+    justify-content: flex-end;
+}
+
+.Product__Page__Header__Bottom__Phone, 
+.Product__Page__Header__Bottom__Cart,
+.Product__Page__Header__Bottom__Wishlist,
+.Product__Page__Header__Bottom__Account,
+.Product__Page__Header__Bottom__LogOut {
+    flex-basis: calc(100% / 3);
+    justify-content: center;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.Product__Page__Header__Bottom__Phone a,
+.Product__Page__Header__Bottom__Cart a,
+.Product__Page__Header__Bottom__Wishlist a,
+.Product__Page__Header__Bottom__Account a,
+.Product__Page__Header__Bottom__LogOut a {
+    width: 100%;
+    justify-content: center;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Product__Page__Header__Bottom__Phone__Icon, 
+.Product__Page__Header__Bottom__Cart__Icon, 
+.Product__Page__Header__Bottom__Wishlist__Icon,
+.Product__Page__Header__Bottom__Account__Icon,
+.Product__Page__Header__Bottom__LogOut__Icon {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.1);
+    justify-content: center;
+    position: relative;
+}
+
+.Product__Page__Header__Bottom__Cart__Quantity,
+.Product__Page__Header__Bottom__Wishlist__Quantity {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffd840;
+    justify-content: center;
+    font-size: 13px;
+    color: #1e272e;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+    .Product__Page__Header__Bottom__Phone,
+    .Product__Page__Header__Bottom__Cart,
+    .Product__Page__Header__Bottom__Wishlist, 
+    .Product__Page__Header__Bottom__Account,
+    .Product__Page__Header__Bottom__LogOut {
+        padding: 20px 10px;
+    }
+
+    .Product__Page__Header__Bottom__Phone p,
+    .Product__Page__Header__Bottom__Cart p,
+    .Product__Page__Header__Bottom__Wishlist p,
+    .Product__Page__Header__Bottom__Account p,
+    .Product__Page__Header__Bottom__LogOut p {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Product__Page__Header__Bottom__Logo {
+        display: none;
+        flex-basis: 0;
+    }
+
+    .Product__Page__Header__Bottom__Filter__Bar  {
+        display: flex;
+    }
+
+    .Product__Page__Header__Bottom__Search {
+        flex-basis: 100%;
+        justify-content: flex-end;
+    }
+
+    .Product__Page__Header__Top__Logo {
+        display: flex;
+        flex-basis: 30%;
+    }
+
+    .Product__Page__Header__Top__Info__Nav {
+        flex-direction: column-reverse;
+        gap: 15px;
+        align-items: flex-end;
+        flex-basis: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .Product__Page__Header__Bottom {
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .Product__Page__Header__Bottom__Logo__Search,
+    .Product__Page__Header__Bottom__Phone__Cart__Wishlist__Account {
+        width: 100%;
+    }
+
+    .Product__Page__Header__Bottom__Phone, 
+    .Product__Page__Header__Bottom__Cart, 
+    .Product__Page__Header__Bottom__Wishlist,
+    .Product__Page__Header__Bottom__Account,
+    .Product__Page__Header__Bottom__LogOut {
+        border: 0.5px solid #ffffff47;
+    }
+
+    .Product__Page__Header__Bottom__Phone p, 
+    .Product__Page__Header__Bottom__Cart p, 
+    .Product__Page__Header__Bottom__Wishlist p,
+    .Product__Page__Header__Bottom__Account p,
+    .Product__Page__Header__Bottom__LogOut p {
+        display: block;
+    }
+
+    .Product__Page__Header__Top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Product__Page__Header__Top__Logo {
+        width: 100%;
+    }
+
+    .Product__Page__Header__Top__Info__Nav {
+        align-items: flex-start;
+    }
+
+    .Product__Page__Header__Top__Info {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Product__Page__Header__Top__Nav__Group {
+        gap: 30px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    .Product__Page__Header__Bottom__Phone p, 
+    .Product__Page__Header__Bottom__Cart p, 
+    .Product__Page__Header__Bottom__Wishlist p, 
+    .Product__Page__Header__Bottom__Account p,
+    .Product__Page__Header__Bottom__LogOut p {
+        display: none;
+    }
+
+    .Product__Page__Header__Top__Info__Nav {
+        display: none;
+    }
+    .Product__Page__Header__Top__Logo {
+        padding: 10px 0;
+        justify-content: space-between;
+    }
+    .Product__Page__Header__Top__Gift {
+        display: flex;
+    }
+}
+
+@media (max-width: 450px) {
+    .Product__Page__Header__Bottom__Search {
+        justify-content: flex-end;
+    }
+    .Product__Page__Header__Bottom__Search input {
+        min-width: 240px;
+    }
+}
+

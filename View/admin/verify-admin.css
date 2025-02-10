@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+div{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+
+.Verify__Admin__Container {
+    width: 100%;
+    height: 100vh;
+    background-color: #060818;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.Verify__Admin__Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    padding: 0 50px;
+    justify-content: space-between;
+    box-shadow: 0 0 100px 0 #32ff7e;
+}
+
+.Verify__Admin__Header__Logo {
+    font-size: 30px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #32ff7e;
+    color: transparent;
+}
+
+.Verify__Admin__Header__Info {
+    gap: 30px;
+}
+
+.Verify__Admin__Header__Info__Item {
+    font-size: 15px;
+    gap: 5px;
+    color: #32ff7e;
+}
+
+.Verify__Admin__Box {
+    width: 500px;
+    height: max-content;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.Verify__Admin__Title {
+    width: 100%;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #32ff7e;
+    gap: 20px;
+    margin-top: 70px;
+}
+
+.Verify__Admin__Input__Group {
+    width: 100%;
+    height: 100%;
+    background-color: #060818;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    justify-content: center;
+    border: 1px solid #32ff7e;
+    box-shadow: 0 0 10px 0 #32ff7e;
+}
+
+.Verify__Admin__Input__Item {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.Verify__Admin__Input__Item label {
+    font-size: 15px;
+    color: #32ff7e;
+}
+
+.Verify__Admin__Input__Item input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid #32ff7e;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.Verify__Admin__Remember__Forget {
+    width: 100%;
+    justify-content: space-between;
+    color: #32ff7e;
+    font-size: 13px;
+}
+
+.Verify__Admin__Remember {
+    gap: 5px;
+}
+
+.Verify__Admin__Remember input {
+    display: none;
+}
+
+.Verify__Admin__Remember label {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #32ff7e;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.Verify__Admin__Remember.active label {
+    color: #fff;
+    background-color: #32ff7e;
+}
+
+.Verify__Admin__Password, .Verify__Admin__SendCode,
+.Verify__Admin__CheckCode {
+    width: 100%;
+    background-color: #32ff7e;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 10px;
+    color: #060818;
+}
+
+.error-email, .error-code, .error-pass, .error-repass {
+    color: red;
+    font-size: 12px;
+}
+
+.loading__box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: 170px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #7d5fff;
+    color: transparent;
+}
+
+.loading__box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation: text 2s ease-in-out forwards infinite;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+}
+
+@keyframes text {
+    0% {
+        -webkit-text-stroke: 1px #7d5fff;
+    }
+    50% {
+        -webkit-text-stroke: 1.5px #7d5fff;
+    }
+    100% {
+        -webkit-text-stroke: 1px #7d5fff;
+    }
+}
+
+
+.Verify__Admin__Alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #060818;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 400px;
+    height: max-content;
+    border: 1px solid #32ff7e;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.Verify__Admin__Alert.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Verify__Admin__Alert__Top {
+    width: 100%;
+    justify-content: center;
+}
+
+.Verify__Admin__Alert__Top__Icon {
+    flex-direction: column;
+    gap: 20px;
+    color: #32ff7e;
+    font-size: 15px;
+}
+
+.Verify__Admin__Alert__Top__Icon svg {
+    font-size: 100px;
+    color: #32ff7e;
+}
+
+.Verify__Admin__Alert__Bottom {
+    color: #32ff7e;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Verify__Admin__Alert__Bottom__Title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.Verify__Admin__Alert__Bottom__Text {
+    font-size: 13px;
+}
+

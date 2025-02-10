@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+div{
+    display: flex;
+}
+:root{
+    --violet-color: #5c1ac3;
+    --white-color: white;
+    --black-color: black;
+    --bg-color: #060818;
+    --text-color: #f3f5fd;
+    --bl-color: #0e1726;
+    --green-color: #00FA9A;
+    --text-bl-color: #ADD8E6;
+    --red-color: #FF3333;
+    --blue-color: #00CED1;
+    --input-color: #1b2e4b;
+    --chat-color: #66FFFF;
+    --chat-color-ad: #D7F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+body.dark{
+    --black-color:var(--red-color);
+    --bl-color: #0e1726;
+}
+.paid{
+    /* background-color: var(--green-color) !important; */
+    border: 2px solid var(--green-color);
+    text-transform: capitalize;
+   
+}
+.status{
+    height: fit-content;
+    width: fit-content;
+    padding: 4px 10px;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.money__table{
+    font-size: 13px;
+}
+.paid:hover{
+    box-shadow: 0 0 10px var(--green-color);
+}
+.shipper:hover{
+    box-shadow: 0 0 10px var(--blue-color);
+}
+.pending:hover{
+    box-shadow: 0 0 10px var(--red-color);
+}
+.shipper{
+    border: 2px solid var(--blue-color);
+    text-transform: capitalize;
+}
+.pending{
+    border: 2px solid var(--red-color);
+    text-transform: capitalize;
+}
+.iphone{
+    color: #FF3333;
+    text-transform: capitalize;
+}
+.vivo{
+    color: #00CED1;
+    text-transform: capitalize;
+}
+.oppo{
+    color: #5c1ac3;
+    text-transform: capitalize;
+}
+.samsung{
+    color: yellow;
+    text-transform: capitalize;
+}
+.xiaomi{
+    color: springgreen;
+    text-transform: capitalize;
+}
+.nokia{
+    color: var(--text-bl-color);
+    text-transform: capitalize;
+}

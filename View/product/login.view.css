@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+div {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, textarea, button {
+    border: none;
+    outline: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.Account__Login__Container {
+    width: 100%;
+    height: 100vh;
+}
+
+.Account__Login__Left {
+    flex-basis: 50%;
+    background-image: linear-gradient(45deg, #55F6FE, #3DAFEF, #AD7AF9, #5487EF);
+    height: 100%;
+    justify-content: center;
+}
+
+.Account__Login__Right {
+    flex-basis: 50%;
+    height: 100%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 100px;
+    justify-content: center;
+    position: relative;
+}
+
+.Account__Login__Right__Title__Box {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Account__Login__Right__Title {
+    width: 100%;
+    font-size: 35px;
+    font-weight: 800;
+    color: #7d5fff;
+}
+
+.Account__Login__Right__Login__Text {
+    width: 100%;
+    font-size: 15px;
+    color: #7d5fff;
+}
+
+.Account__Login__Right__Input__Box {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Account__Login__Right__Input__Item {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Account__Login__Right__Input__Item label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.Account__Login__Right__Input__Item input {
+    width: 100%;
+    height: 35px;
+    padding: 0 15px;
+    border-bottom: 2px solid #7d5fff;
+}
+
+.Account__Login__Right__Input__Item input::placeholder {
+    font-size: 13px;
+}
+
+.Account__Login__Right__Remember__Box {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Account__Login__Right__Remember__Box__Left {
+    gap: 5px;
+}
+
+.Account__Login__Right__Remember__Box__Left input {
+    display: none;
+}
+
+.Account__Login__Right__Remember__Box__Left label {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #7d5fff;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Account__Login__Right__Remember__Box__Left label svg {
+    font-size: 12px;
+    color: #fff;
+    display: none;
+}
+
+.Account__Login__Right__Remember__Box__Left.active label {
+    background-color: #7d5fff;
+}
+
+.Account__Login__Right__Remember__Box__Left.active label svg {
+    display: block;
+}
+
+.Account__Login__Right__Remember__Box__Left span {
+    font-size: 14px;
+    color: #7d5fff;
+}
+
+.Account__Login__Right__Remember__Box__Right a {
+    font-size: 13px;
+    color: #7d5fff;
+    font-weight: 500;
+}
+
+.Account__Login__Right__Login__Button {
+    width: 100%;
+    justify-content: center;
+    background-color: #7d5fff;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.Account__Login__Right__Login__Or {
+    width: 150px;
+    justify-content: center;
+    height: 2px;
+    background-color: #7d5fff45;
+}
+
+.Account__Login__Right__Login__Or span {
+    width: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7d5fff;
+    font-weight: 400;
+}
+
+.Account__Login__Right__Login__Group {
+    width: 100%;
+    gap: 10px;
+}
+
+.Account__Login__Right__Login__Google,
+.Account__Login__Right__Login__Facebook{
+    flex-basis: calc(50% - 2.5px);
+    justify-content: center;
+    gap: 5px;
+    border: 2px solid #7d5fff;
+    border-radius: 5px;
+    height: 42px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #7d5fff;
+    cursor: pointer;
+}
+
+img.Account__Login__Right__Login__Google__Image {
+    width: 22px;
+}
+
+img.Account__Login__Right__Login__Facebook__Image {
+    width: 26px;
+}
+
+.Account__Login__Right__Have__Account {
+    width: 100%;
+    font-size: 14px;
+    gap: 5px;
+    color: #7d5fff;
+}
+
+.Account__Login__Right__Have__Account a {
+    color: #7d5fff;
+    font-weight: 500;
+}
+
+.Account__Login__Right__Loading {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: #7d5fff;
+    animation: loadingLogin 2s ease-out infinite;
+}
+
+@keyframes loadingLogin {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Account__Login__Right__Alert__Failed,
+.Account__Login__Right__Alert__Success {
+    width: 350px;
+    background-color: #fff;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Account__Login__Right__Alert__Failed {
+    border: 2px solid #ff3838;
+}
+
+.Account__Login__Right__Alert__Success {
+    border: 2px solid #32ff7e;
+}
+
+.Account__Login__Right__Alert__Failed__Left,
+.Account__Login__Right__Alert__Success__Left {
+    flex-basis: 15%;
+}
+
+.Account__Login__Right__Alert__Failed__Left__Icon,
+.Account__Login__Right__Alert__Success__Left__Icon {
+    width: 100%;
+    font-size: 35px;
+    justify-content: center;
+}
+
+.Account__Login__Right__Alert__Failed__Right,
+.Account__Login__Right__Alert__Success__Right {
+    flex-basis: calc(85% - 10px);
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Account__Login__Right__Alert__Failed__Notify,
+.Account__Login__Right__Alert__Success__Notify {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.Account__Login__Right__Alert__Failed__Text,
+.Account__Login__Right__Alert__Success__Text {
+    width: 100%;
+    font-size: 13px;
+}
+
+.Account__Login__Right__Alert__Failed__Left__Icon,
+.Account__Login__Right__Alert__Failed__Notify,
+.Account__Login__Right__Alert__Failed__Text {
+    color: #ff3838;
+}
+
+.Account__Login__Right__Alert__Success__Left__Icon,
+.Account__Login__Right__Alert__Success__Notify,
+.Account__Login__Right__Alert__Success__Text {
+    color: #32ff7e;
+}
+
+.Account__Login__Right__Alert__Success__Process__Box,
+.Account__Login__Right__Alert__Failed__Process__Box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 4px;
+}
+
+.Account__Login__Right__Alert__Success__Process,
+.Account__Login__Right__Alert__Failed__Process {
+    width: 100%;
+    height: 5px;
+    background-color: #32ff7e;
+    border-radius: 30px;
+    animation: processAninmate 10s forwards;
+}
+
+.Account__Login__Right__Alert__Failed__Process {
+    background-color: #ff3838;
+}
+
+@keyframes processAninmate {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .Account__Login__Right__Login__Group {
+        flex-wrap: wrap;
+    }
+    .Account__Login__Right__Login__Google, .Account__Login__Right__Login__Facebook {
+        flex-basis: 100%;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Account__Login__Right {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Account__Login__Left {
+        display: none;
+    }
+    .Account__Login__Right {
+        flex-basis: 100%;
+        padding: 50px 100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Account__Login__Right {
+        flex-basis: 100%;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Account__Login__Right {
+        flex-basis: 100%;
+        padding: 50px 20px;
+    }
+}
+
+.loading__box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: 170px;
+    /* background-color: transparent; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #7d5fff;
+    /* color: transparent; */
+    z-index: 1000;
+}
+
+.loading__box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation: text 2s ease-in-out forwards infinite;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+}
+
+@keyframes text {
+    0% {
+        -webkit-text-stroke: 1px #7d5fff;
+    }
+    50% {
+        -webkit-text-stroke: 1.5px #7d5fff;
+    }
+    100% {
+        -webkit-text-stroke: 1px #7d5fff;
+    }
+}
+
+.alert__notify__box__success,
+.alert__notify__box__failed {
+    position: fixed;
+    top: 80px;
+    right: -300px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 15px;
+    width: 300px;
+    transition: 0.5s;
+}
+
+.alert__notify__box__success.active,
+.alert__notify__box__failed.active {
+    right: 10px;
+}
+
+.alert__notify__box__success__close,
+.alert__notify__box__failed__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.alert__notify__box__success {
+    border-left: 5px solid #32ff7e;
+}
+
+.alert__notify__box__failed {
+    border-left: 5px solid #ff3838;
+}
+
+.alert__notify__box__success__left,
+.alert__notify__box__failed__left {
+    font-size: 30px;
+    align-items: center;
+}
+
+.alert__notify__box__success__left,
+.alert__notify__box__success__close {
+    color: #32ff7e;
+}
+
+.alert__notify__box__failed__left,
+.alert__notify__box__failed__close {
+    color: #ff3838;
+}
+
+.alert__notify__box__success__right,
+.alert__notify__box__failed__right {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.alert__notify__box__success__right__title,
+.alert__notify__box__failed__right__title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.alert__notify__box__success__right__title {
+    color: #32ff7e;
+}
+
+.alert__notify__box__failed__right__title {
+    color: #ff3838;
+}
+
+.alert__notify__box__success__right__content,
+.alert__notify__box__failed__right__content {
+    font-size: 12px;
+    color: #111;
+    font-weight: 500;
+}
+
+.alert__notify__box__success__progress,
+.alert__notify__box__failed__progress {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.alert__notify__box__success__progress.active,
+.alert__notify__box__failed__progress.active {
+    animation: progress 5s forwards;
+}
+
+.alert__notify__box__success__progress {
+    background-color: #32ff7e;
+}
+
+.alert__notify__box__failed__progress {
+    background-color: #ff3838;
+}
+
+@keyframes progress {
+    100% {
+        width: 0;
+    }
+}
+
+.loading__bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000bd;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}

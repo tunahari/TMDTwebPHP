@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.6",
+        "swiftmailer/swiftmailer": "6.0",
+        "smsgatewayme/client": "^0.0.1"
+    }
+}

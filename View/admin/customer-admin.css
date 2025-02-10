@@ -1,0 +1,133 @@
+h4.order_product {
+    text-transform: capitalize;
+}
+
+h4.check_status_insurance {
+    padding: 4px;
+}
+.status_insurance {
+    justify-content: center;
+    border-radius: 4px;
+    text-transform: capitalize;
+    color: white;
+    align-items: center;
+    width: 3em;
+}
+.yes_insurance{
+    background: #00FF00;
+}
+.no_insurance{background: #F00000;}
+
+.show__icon__custommer {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.left__box--custommer, .right__box--custommer {
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list__custommer--show {
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+.list__custommer--show h4 {
+    font-size: 18px;
+}
+
+.list__custommer--show h5 {
+    font-size: 13px;
+    color: gray;
+    font-weight: 500;
+}
+
+.custommer__watch {
+    padding: 1em;
+}
+
+.list__custommer--show img {
+    height: 2em;
+    width: 2em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.show__icon__custommer h1 {
+    color: var(--input-color);
+}
+
+.select__customer__box {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #191e3a;
+    gap: 5px;
+    width: 50px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    max-height: 25px;
+}
+
+.select__customer__option__selected {
+    width: 100%;
+    justify-content: center;
+    padding: 2px 0;
+    min-height: 25px;
+    align-items: center;
+}
+
+.select__customer__option__box {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 26px;
+    background-color: #191e3a;
+    display: none;
+}
+
+.select__customer__option__box.active {
+    display: flex;
+}
+
+.select__customer__option {
+    width: 100%;
+    justify-content: center;
+    min-height: 25px;
+    transition: 0.2s;
+    align-items: center;
+}
+
+.select__customer__option__box .select__customer__option:hover {
+    background-color: #0f1224;
+}
+
+.customer__data__not__found__tr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.customer__data__not__found__tr__td {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer__data__not__found {
+    font-size: 14px;
+    color: #ff3838;
+}
+

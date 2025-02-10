@@ -1,0 +1,766 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+div {
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+textarea,
+button {
+    outline: none;
+    border: none;
+}
+
+.Profile__Container {
+    width: 100%;
+    flex-direction: column;
+    padding: 50px 100px;
+    gap: 30px;
+}
+
+.Profile__Title {
+    font-size: 30px;
+    font-weight: 800;
+    width: 100%;
+}
+
+.Profile__Tab {
+    width: 100%;
+    gap: 5px;
+}
+
+.Profile__Tab__Item {
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 3px 0 #80808029;
+    border-radius: 5px;
+}
+
+.Profile__Tab__Item.active {
+    background-color: #7d5fff;
+    color: #fff;
+}
+
+.Profile__Panel {
+    width: 100%;
+}
+
+.Profile__Panel__Item {
+    display: none;
+}
+
+.Profile__Panel__Item.active {
+    display: flex;
+}
+
+.Profile__Panel__Item__Profile,
+.Profile__Panel__Item__Message {
+    width: 100%;
+    height: max-content;
+    gap: 20px;
+    align-items: flex-start;
+    box-shadow: 0 0 10px 0 #8080801a;
+}
+
+.Profile__Panel__Item__Profile__Left,
+.Profile__Panel__Item__Message__Left {
+    flex-direction: column;
+    flex-basis: 25%;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.Profile__Panel__Item__Profile__Left__Avt,
+.Profile__Panel__Item__Message__Left__Avt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #7d5fff;
+    border: 10px solid #7d5fff;
+    cursor: pointer;
+    overflow: hidden;
+    height: 200px;
+}
+
+.Profile__Panel__Item__Profile__Left__Avt svg,
+.Profile__Panel__Item__Message__Left__Avt svg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    color: #fff;
+    border: 3px solid #7d5fff;
+    border-radius: 50%;
+    background-color: #7d5fff;
+}
+
+.Profile__Panel__Item__Profile__Left__Save__Avt {
+    color: #fff;
+    padding: 6px 8px;
+    background-color: #7d5fff;
+    font-size: 12px;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Profile__Panel__Item__Profile__Left__Name,
+.Profile__Panel__Item__Message__Left__Name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #7d5fff;
+}
+
+.Profile__Panel__Item__Profile__Left__Level,
+.Profile__Panel__Item__Message__Left__Level {
+    justify-content: center;
+    gap: 5px;
+    font-size: 15px;
+    color: #ff3838;
+}
+
+.Profile__Panel__Item__Profile__Right,
+.Profile__Panel__Item__Message__Right {
+    flex-basis: 75%;
+    gap: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    align-items: flex-start;
+}
+
+.Profile__Panel__Item__Profile__Right__Title {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Profile__Panel__Item__Profile__Right__Input__Box {
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.Profile__Panel__Item__Profile__Right__Input__Item {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.Profile__Panel__Item__Profile__Right__Input__Item label {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7d5fff;
+    align-items: center;
+    gap: 5px;
+}
+
+.Profile__Panel__Item__Profile__Right__Input__Item input {
+    width: 100%;
+    border: 2px solid #7d5fff26;
+    padding: 0px 15px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.Profile__Input__Error {
+    font-size: 12px;
+    color: #ff3838;
+    font-weight: 500;
+}
+
+#submitProfile,
+#submitPass {
+    background-color: #7d5fff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Profile__Panel__Item__Profile__Right__Input__Item input:focus {
+    border: 2px solid #7d5fff;
+}
+
+.Profile__Panel__Item__Message__Right {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Profile__Panel__Item__Message__Right__Header {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Left {
+    gap: 10px;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Avatar {
+    width: 70px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    border: 5px solid #f4f4f4;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Name {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Name h3 {
+    font-size: 20px;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Name p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #32ff7e;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Name p svg {
+    font-size: 8px;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Icon__Group {
+    gap: 20px;
+}
+
+.Profile__Panel__Item__Message__Right__Header__Icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #7d5fff;
+}
+
+.Profile__Panel__Item__Message__Right__Body {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 20px 0;
+}
+
+.Profile__Panel__Item__Message__Receive__Item {
+    width: 100%;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.Profile__Panel__Item__Message__Receive__Item__Avatar {
+    width: 40px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    border: 2px solid #f4f4f4;
+}
+
+.Profile__Panel__Item__Message__Receive__Item__Info {
+    flex-direction: column;
+    gap: 5px;
+    width: calc(100% - 40px);
+    align-items: flex-start;
+}
+
+.Profile__Panel__Item__Message__Receive__Item__Info__Top {
+    width: 100%;
+    gap: 5px;
+}
+
+.Profile__Panel__Item__Message__Receive__Item__Time,
+.Profile__Panel__Item__Message__Send__Item__Time {
+    font-size: 11px
+}
+
+.Profile__Panel__Item__Message__Receive__Item__Info__Top span {
+    font-size: 10px;
+}
+
+.Profile__Panel__Item__Message__Receive__Item__Info__Bottom {
+    max-width: 50%;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    border-radius: 2px 10px 10px 10px;
+    padding: 10px;
+}
+
+.Profile__Panel__Item__Message__Send__Item {
+    width: 100%;
+}
+
+.Profile__Panel__Item__Message__Send__Item__Info {
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+}
+
+.Profile__Panel__Item__Message__Send__Item__Info__Bottom {
+    max-width: 50%;
+    background-color: #7d5fff;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 10px 2px 10px 10px;
+    padding: 10px;
+}
+
+.Profile__Panel__Item__Message__Right__Footer {
+    width: 100%;
+}
+
+.Profile__Write__Message {
+    width: 100%;
+    justify-content: space-between;
+    background-color: #00000008;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.Profile__Write__Message input {
+    flex-basis: 80%;
+    height: 30px;
+    background-color: transparent;
+}
+
+.Profile__Write__Message__Icon__Group {
+    flex-basis: 20%;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.Profile__Write__Message__Icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+div#sendMessage {
+    color: #7d5fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loading__box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: 170px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #7d5fff;
+    color: transparent;
+    z-index: 1000;
+}
+
+.loading__box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation: text 2s ease-in-out forwards infinite;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 3px 2px #7d5fff;
+    }
+}
+
+@keyframes text {
+    0% {
+        -webkit-text-stroke: 1px #7d5fff;
+    }
+
+    50% {
+        -webkit-text-stroke: 1.5px #7d5fff;
+    }
+
+    100% {
+        -webkit-text-stroke: 1px #7d5fff;
+    }
+}
+
+.alert__notify__box__success,
+.alert__notify__box__failed {
+    position: fixed;
+    top: 80px;
+    right: -300px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 15px;
+    width: 300px;
+    transition: 0.5s;
+}
+
+.alert__notify__box__success.active,
+.alert__notify__box__failed.active {
+    right: 10px;
+}
+
+.alert__notify__box__success__close,
+.alert__notify__box__failed__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.alert__notify__box__success {
+    border-left: 5px solid #32ff7e;
+}
+
+.alert__notify__box__failed {
+    border-left: 5px solid #ff3838;
+}
+
+.alert__notify__box__success__left,
+.alert__notify__box__failed__left {
+    font-size: 30px;
+    align-items: center;
+}
+
+.alert__notify__box__success__left,
+.alert__notify__box__success__close {
+    color: #32ff7e;
+}
+
+.alert__notify__box__failed__left,
+.alert__notify__box__failed__close {
+    color: #ff3838;
+}
+
+.alert__notify__box__success__right,
+.alert__notify__box__failed__right {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.alert__notify__box__success__right__title,
+.alert__notify__box__failed__right__title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.alert__notify__box__success__right__title {
+    color: #32ff7e;
+}
+
+.alert__notify__box__failed__right__title {
+    color: #ff3838;
+}
+
+.alert__notify__box__success__right__content,
+.alert__notify__box__failed__right__content {
+    font-size: 12px;
+    color: #111;
+    font-weight: 500;
+}
+
+.alert__notify__box__success__progress,
+.alert__notify__box__failed__progress {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.alert__notify__box__success__progress.active,
+.alert__notify__box__failed__progress.active {
+    animation: progress 5s forwards;
+}
+
+.alert__notify__box__success__progress {
+    background-color: #32ff7e;
+}
+
+.alert__notify__box__failed__progress {
+    background-color: #ff3838;
+}
+
+@keyframes progress {
+    100% {
+        width: 0;
+    }
+}
+
+.loading__bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000bd;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.Profile__Panel__Item__Bill {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Profile__Panel__Item__Bill__Left {
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Profile__Panel__Item__Bill__Left__Bill__Box {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+    height: 60px;
+    transition: 0.3s;
+    box-shadow: 0 0 5px 0 #7d5fff21;
+    cursor: pointer;
+}
+
+.Profile__Panel__Item__Bill__Box {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 #8080801a;
+    height: 700px;
+    align-items: flex-start;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.Profile__Panel__Item__Bill__Title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #7d5fff;
+    width: 100%;
+}
+
+.Profile__Panel__Item__Bill__Left__Bill__Box.active {
+    height: max-content;
+}
+
+.Profile__Panel__Item__Bill__Left__Bill__Title {
+    font-size: 15px;
+    font-weight: 500;
+    gap: 10px;
+    width: 100%;
+}
+
+.Profile__Panel__Item__Bill__Left__Bill__Title span {
+    color: #7d5fff;
+    font-weight: 900
+}
+
+.Profile__Panel__Item__Bill__Left__Bill__Content {
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 10px 0 #7d5fff21;
+    border: 20px solid #7d5fff21;
+}
+
+.Profile__Panel__Item__Bill__Left__Bill__Content__Header {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 2px solid #7d5fff;
+    cursor: pointer;
+}
+
+.Bill__Content__Header__Column {
+    flex-basis: 20%;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #7d5fff;
+    height: max-content;
+}
+
+.Profile__Panel__Item__Bill__Left__Bill__Content__Table {
+    width: 100%;
+    flex-direction: column;
+}
+
+.Bill__Content__Table__Row {
+    width: 100%;
+    padding: 20px;
+}
+
+.Bill__Content__Table__Column {
+    flex-basis: 20%;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Bill__Content__Table__Column img {
+    width: 50px;
+}
+
+.Bill__Title {
+    gap: 10px;
+    font-size: 15px;
+}
+
+.Bill__Title svg {
+    font-size: 35px;
+    color: #7d5fff;
+}
+
+.Bill__Info__Box {
+    flex-basis: 84%;
+}
+
+.Bill__Info__Item {
+    flex-basis: calc(100% / 3 - 30px);
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Bill__Info__Item p:nth-child(1) {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.Bill__Info__Item p:nth-child(2) {
+    color: #ff3838;
+    font-size: 13px;
+}
+
+.status-cancel,
+.status-wait,
+.status-handled,
+.status-success
+{
+color: #fff;
+padding: 3px 10px;
+font-size: 10px;
+font-weight: 600;
+border-radius: 2px;
+}
+
+.status-cancel {
+    background-color: #ff3838;
+}
+
+.status-wait {
+    background-color: #7d5fff;
+}
+
+.status-handled {
+    background-color: #fff200;
+}
+
+.status-success {
+    background-color: #32ff7e;
+}
+
+div#CancelBill {
+    padding: 7px 10px;
+    background-color: #ff3838;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+}

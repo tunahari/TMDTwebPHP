@@ -1,0 +1,613 @@
+.Profile__Container__Left {
+  flex-basis: 35%;
+  flex-direction: column;
+  background-color: #191e3a;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.Profile__Container__Left__Title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+}
+
+.Profile__Container__Left__Avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #7d5fff;
+  background-color: #7d5fff;
+}
+
+.Profile__Container__Left__Avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.Profile__Container__Left__Name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.Profile__Container__Left__Info {
+  flex-direction: column;
+  gap: 15px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.Profile__Container__Left__Info__Position {
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
+  color: #32ff7e;
+  font-size: 14px;
+  align-items: center;
+}
+
+.Profile__Container__Left__Info__Position svg {
+  font-size: 12px;
+}
+
+.Profile__Container__Left__Info__Icon {
+  width: 30px;
+}
+
+.Profile__Container__Left__Info__Icon__Group {
+  gap: 10px;
+  font-size: 14px;
+  flex-basis: calc(100% - 20px);
+}
+
+.Profile__Container__Left__Info__Birth,
+.Profile__Container__Left__Info__Address,
+.Profile__Container__Left__Info__Email,
+.Profile__Container__Left__Info__Phone {
+  gap: 10px;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.Profile__Container__Left__Info__Introduce {
+  font-size: 14px;
+  gap: 10px;
+  color: #fff;
+}
+
+.Profile__Container__Left__Info__Introduce__Text {
+  width: 100%;
+  font-size: 13px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: var(--bg-color);
+  border: 1px solid #7d5fff;
+  line-height: 20px;
+  height: 126px;
+  overflow-y: scroll;
+}
+
+.Profile__Container__Left__Info__Introduce__Text::-webkit-scrollbar {
+  width: 0;
+}
+
+.Profile__Container__Left__Info__Icon svg {
+  font-size: 20px;
+  color: #7d5fff;
+}
+
+.Profile__Container__Left__Icon__Box {
+  flex-direction: column;
+  width: 100%;
+  gap: 7px;
+}
+
+.Profile__Container__Left__Icon {
+  width: 100%;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: var(--bg-color);
+  border: 1px solid #7d5fff;
+}
+
+.Profile__Container__Left__Icon__Link {
+  font-size: 13px;
+  color: #7d5fff;
+}
+
+.Profile__Container__Left__Info__Edit {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #fff;
+}
+
+.Profile__Container__Right {
+  flex-basis: calc(65% - 20px);
+  background-color: #191e3a;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Profile__Container__Right__Title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+}
+
+.Profile__Container__Right__Info {
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Profile__Container__Right__Info__Item__Title {
+  font-size: 17px;
+  font-weight: 600;
+  gap: 10px;
+  color: #32ff7e;
+}
+
+.Profile__Container__Right__Info__Item__Box {
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Profile__Container__Right__Info__Item {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Profile__Container__Right__Info__Input__Box {
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.Profile__Container__Right__Info__Input__Box__Title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #32ff7e;
+}
+
+.Profile__Container__Right__Info__Input__Box__Content {
+  width: 100%;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.Profile__Container__Right__Info__Input__Box__Content__Avatar {
+  flex-direction: column;
+  flex-basis: 20%;
+  gap: 15px;
+  align-items: center;
+}
+
+.Info__Input__Box__Content__Avatar__Image {
+  margin-bottom: 25px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border: 3px solid #32ff7e;
+  border-radius: 50%;
+  background-color: #32ff7e;
+}
+
+.Info__Input__Box__Content__Avatar__Image img {
+  width: 100%;
+}
+
+.Info__Input__Box__Content__Avatar__Update {
+  gap: 10px;
+}
+
+.Info__Input__Box__Content__Avatar__Update label {
+  background-color: #32ff7e;
+  display: flex;
+  width: 85px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+button#submitUpdateAvatarEmployee {
+  background-color: transparent;
+  display: flex;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  gap: 5px;
+  border: 2px solid #32ff7e;
+}
+
+.Info__Input__Box__Content__Avatar__Update input {
+  display: none;
+}
+
+.Profile__Container__Right__Info__Input__Box__Content__Input {
+  flex-basis: 100%;
+  gap: 15px;
+}
+
+.Info__Input__Box__Content__Input__Item {
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: calc(100% - 15px / 2);
+}
+
+.Info__Input__Box__Content__Input__Item label,
+.Profile__Container__Right__Social__Network__Box__Item label {
+  color: #32ff7e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Info__Input__Box__Content__Input__Item input {
+  outline: none;
+  width: 326px;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--bg-color);
+  border: 1px solid #32ff7e4f;
+  line-height: 20px;
+}
+
+.Info__Input__Box__Content__Input__Item
+  input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.Profile__Container__Right__Info__Input__Introduce {
+  width: 100%;
+  border: 1px solid #32ff7e4f;
+  border-radius: 5px;
+}
+
+.Profile__Container__Right__Info__Input__Introduce textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 15px;
+  color: #fff;
+  height: 100px;
+  max-height: 100px;
+}
+
+.Profile__Container__Right__Info__Input__Box__Content__Social__Network {
+  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Profile__Container__Right__Social__Network__Box {
+  width: 100%;
+  gap: 20px;
+}
+
+.Profile__Container__Right__Social__Network__Box__Item {
+  flex-basis: calc(50% - 10px);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Profile__Container__Right__Social__Network__Icon__Input__Box {
+  width: 100%;
+  gap: 10px;
+}
+
+.Profile__Container__Right__Social__Network__Input {
+  gap: 10px;
+  flex-direction: column;
+}
+
+.Profile__Container__Right__Social__Network__Icon {
+  background-color: #32ff7e;
+  color: var(--bg-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.Profile__Container__Right__Social__Network__Input input {
+  outline: none;
+  flex-basis: calc(100% - 50px);
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--bg-color);
+  border: 1px solid #32ff7e4f;
+  line-height: 20px;
+}
+
+.Profile__Save__Info__Button {
+    margin-top: 8px;
+  text-align: center;
+  float: right;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  align-self: flex-end;
+  /* color: #32ff7e; */
+  border: 1px solid #32ff7e4f;
+  background-color: var(--bg-color);
+}
+:hover.Profile__Save__Info__Button{
+  border: 1px solid #32ff7e;
+}
+.Profile__Save__Info__Button__Save {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+:hover.Profile__Save__Info__Button__Save{
+ /* color: #32ff7e; */
+ color: #32ff7e !important;
+}
+
+.Profile__Save__Pass__Button {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #32ff7e ;
+  cursor: pointer;
+  font-weight: 700;
+}
+:hover.Profile__Save__Pass__Button {
+  color: #32ff7e !important;
+  border: 1px #32ff7e solid !important;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.Input__NV__Info__Error {
+  font-size: 12px;
+  color: #ff3838;
+  display: none;
+  width: 100%;
+}
+
+.Input__NV__Info__Error.active {
+  display: flex;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.loading__box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 170px;
+  height: 170px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 17px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #7d5fff;
+  color: transparent;
+}
+
+.loading__box p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  animation: text 2s ease-in-out forwards infinite;
+}
+
+.loading {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+    box-shadow: 1px 3px 2px #7d5fff;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 3px 2px #7d5fff;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 3px 2px #7d5fff;
+  }
+}
+
+@keyframes text {
+  0% {
+    -webkit-text-stroke: 1px #7d5fff;
+  }
+  50% {
+    -webkit-text-stroke: 1.5px #7d5fff;
+  }
+  100% {
+    -webkit-text-stroke: 1px #7d5fff;
+  }
+}
+
+.alert__notify__box__success,
+.alert__notify__box__failed {
+  position: fixed;
+  top: 80px;
+  right: -300px;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 15px;
+  width: 300px;
+  transition: 0.5s;
+}
+
+.alert__notify__box__success.active,
+.alert__notify__box__failed.active {
+  right: 10px;
+}
+
+.alert__notify__box__success__close,
+.alert__notify__box__failed__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.alert__notify__box__success {
+  border-left: 5px solid #32ff7e;
+}
+
+.alert__notify__box__failed {
+  border-left: 5px solid #ff3838;
+}
+
+.alert__notify__box__success__left,
+.alert__notify__box__failed__left {
+  font-size: 30px;
+  align-items: center;
+}
+
+.alert__notify__box__success__left,
+.alert__notify__box__success__close {
+  color: #32ff7e;
+}
+
+.alert__notify__box__failed__left,
+.alert__notify__box__failed__close {
+  color: #ff3838;
+}
+
+.alert__notify__box__success__right,
+.alert__notify__box__failed__right {
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.alert__notify__box__success__right__title,
+.alert__notify__box__failed__right__title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.alert__notify__box__success__right__title {
+  color: #32ff7e;
+}
+
+.alert__notify__box__failed__right__title {
+  color: #ff3838;
+}
+
+.alert__notify__box__success__right__content,
+.alert__notify__box__failed__right__content {
+  font-size: 12px;
+  color: #111;
+  font-weight: 500;
+}
+
+.alert__notify__box__success__progress,
+.alert__notify__box__failed__progress {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 3px;
+  border-radius: 5px;
+}
+
+.alert__notify__box__success__progress.active,
+.alert__notify__box__failed__progress.active {
+  animation: progress 5s forwards;
+}
+
+.alert__notify__box__success__progress {
+  background-color: #32ff7e;
+}
+
+.alert__notify__box__failed__progress {
+  background-color: #ff3838;
+}
+
+@keyframes progress {
+  100% {
+    width: 0;
+  }
+}
